@@ -1,0 +1,38 @@
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+    background-color: #B2EBF4;
+    padding: 20px;s
+    text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnext {
+    overflow: hidden;
+    background-color: #8C8C8C;
+}
+
+/* Style the topnext links */
+.topnext a {
+    float: left;
+    display: white;
+    color: #353535;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnext a:hover {
+    background-color: #00D8FF;
+    color: black;
+}
+</style>
