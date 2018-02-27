@@ -26,7 +26,8 @@
 	
 	<%@ include file="/module/header.jsp" %>
 	<%@ include file="/module/topnext.jsp" %>
-	<%-- <%@ include file="/Cloud/cloudmain.jsp" %> --%>
+	<%@ include file="/Cloud/cloudmain.jsp" %> 
+	
 	
     
     

@@ -16,8 +16,8 @@
 <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/main.css" />
 </head>
 <body>
-	<%@ include file="/module/header.jsp" %>
-	<%@ include file="/module/topnext.jsp" %>
+	
+	
 
 	 <div class="container" align ="center">
             <p class="headline">놀라운 기능을 알아보세요.</p>
