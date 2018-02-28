@@ -1,311 +1,33 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<!DOCTYPE html >
-<html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-	<title>NEXTCloud - È£½ºÆÃ, ±× ÀÌ»óÀÇ Å¬¶ó¿ìµå</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NEXTCloud - í˜¸ìŠ¤íŒ…, ê·¸ ì´ìƒì˜ í´ë¼ìš°ë“œ</title>
+	<link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/bootstrap-3.3.2-dist/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/main.css" />
-	  <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+	 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
       <meta name="format-detection" content="telephone=no">
 	  <meta property="og:title" content="NEXTCloud">
 	  <meta property="og:url" content="">
-      <meta property="og:description" content="»óÇ°">
+      <meta property="og:description" content="ìƒí’ˆ">
+	
+	 
 </head>
 <body>
 	<%@ include file="/module/header.jsp" %>
 	<%@ include file="/module/topnext.jsp" %>
 
-		<!-- <header class="Next header">
-			<div class="container"> 
-			  <div class="row"> 
-				<a href="/">
-					<figure class="brand" alt="NEXT"></figure>
-				</a>
-				<div class="col-sm-12 col-md-6">
-				  <a href="/"><figure class="brand" alt="NEXT Cloud"></figure></a>
-                </div>
-        </header><article class="next article"> -->
-    <section class="hero lg product-type">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                  <table border="5" style="width: 40%" align ="center" class="details" >
-              <br><br>
-                <tr>
-                	<td class="far fa-cloud" class="headline" align ="center" > Å¬¶ó¿ìµå</td>
-                	<td class="details" align ="center"> ³²³à³ë¼Ò ´©±¸³ª ¼Õ½±°í ½Å¼ÓÇÏ°Ô ÀÌ¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù. 5ºÐ ÀÌ³»¿¡ °áÁ¦ºÎÅÍ ÀÎ½ºÅÏ½º »ý¼º±îÁö ¸ðµÎ ¸¶Ä¡¼¼¿ä. ÀÎ½ºÅÏ½º´Â ¾ðÁ¦³ª À¥¿¡¼­ °ü¸®ÇÒ ¼ö ÀÖ½À´Ï´Ù.</td>
-                </tr>
-                <tr>
-                    <td class="far fa-server" class="headline" align ="center">´Üµ¶ Å¬¶ó¿ìµå</td>
-                    <td class="details" align ="center"> ´Ù¸¥ ÀÎ½ºÅÏ½º¿ÍÀÇ ¼º´É ¿µÇâÀ» ¹ÞÁö ¾Ê´Â ´Üµ¶ Å¬¶ó¿ìµå¸¦ ½ÃÀÛÇÏ¼¼¿ä. °í»ç¾çÀ» ¿ä±¸ÇÏ´Â ¼­ºñ½º¿¡ ÀûÇÕÇÑ »óÇ°ÀÔ´Ï´Ù. ¸¶Âù°¡Áö·Î ÀÎ½ºÅÏ½º´Â À¥¿¡¼­ °ü¸®ÇÒ ¼ö ÀÖ½À´Ï´Ù.</td>
-                </tr>
-                <tr>
-                 	<td class="far fa-server" class="headline" align ="center">º¸¾È ÇÁ·Ï½Ã</td>
-                 	<td class="details" align ="center">¼­¹ö À§Ä¡¿¡ °ü°è¾øÀÌ ¾îµð¼­³ª D-DoS¸¦ ºñ·ÔÇÑ À¯ÇØ Æ®·¡ÇÈÀ¸·ÎºÎÅÍ ¾ÈÀüÇÏ°Ô º¸È£ ¹ÞÀ¸¼¼¿ä. ¼­¹ö¿¡¼­ VPN ÇÁ·Ï½Ã¸¦ ¼³Á¤ÇÏ´Â °Í¸¸À¸·Î ¼Õ½±°Ô ½ÃÀÛÇÏ°í, º¸È£ ¹ÞÀ» ¼ö ÀÖ½À´Ï´Ù.</td>
-                </tr>	
-                   </table>
-                   </div>
-                 </div>
-               </div>   
-      </section>
 
-    <section class="hero lg product-available">
-        <div class="container" align ="center">
-            <p class="headline">³î¶ó¿î ±â´ÉÀ» ¾Ë¾Æº¸¼¼¿ä.</p>
-	            <div class="row justify-content-center">
-	            	</div>
-	            <div class="col-9 col-sm-6 col-md-3">
-	            	</div>
-	            </div>
-                  <table border="5" style="width: 40%" align ="center" >
-                  	<tr>
-                  		<td class="item" class="details" align ="center"><i class="far fa-clock"></i> ½ÃÀÛ±îÁö 40ÃÊ</td><br>
-                  		<td align ="center"> ÀÎ½ºÅÏ½º ÁÖ¹® ÈÄ »ý¼º±îÁö Æò±Õ 40ÃÊ°¡ ¼Ò¿äµË´Ï´Ù. </td>
-                  	</tr>
-                  	<tr>
-                  		<td class="item" class="details" align ="center"><i class="far fa-power-off"></i> Àü¿ø °ü¸® </td>
-                  		<td align ="center"> Àü¿ø ¹öÆ°À» Å¬¸¯ÇÏ´Â °Í¸¸À¸·Î ÀÎ½ºÅÏ½º Àü¿øÀ» °ü¸®ÇÏ¼¼¿ä. </td>
-                  	</tr>
-                  	<tr>
-                  		<td class="item" class="details" align ="center"><i class="far fa-power-off"></i> ÃÊ±âÈ­ </td>
-                  		<td align ="center">  ÃÊ±âÈ­°¡ ÇÊ¿äÇÒ ¶§ ¾ðÁ¦µçÁö, ±â´Ù¸²¾øÀÌ ÀÛ¾÷ÇÏ¼¼¿ä. </td>
-                  	</tr>
-                  	<tr>
-                  		<td class="item" class="details" align ="center"><i class="far fa-power-off"></i>¾÷±×·¹ÀÌµå  </td>
-                  		<td align ="center">  Áõ°¡ÇÏ´Â ¼ö¿ä¿¡ ¹ÎÃ¸ÇÏ°Ô ´ëÀÀÇÏ°í ¾÷±×·¹ÀÌµåÇÏ¼¼¿ä. </td>
-                  	</tr>
-                  	<tr>
-                  		<td class="item" class="details" align ="center"><i class="far fa-power-off"></i>¼º´É ÁöÇ¥  </td>
-                  		<td align ="center">   ¼º´É ÁöÇ¥¸¦ Âü°íÇÏ°í Áõ°¡ÇÏ´Â ¼ö¿ä¿¡ ¾Õ¼­ ´ëÀÀÇÏ¼¼¿ä. </td>
-                  	</tr>
-                  	<tr>
-                  		<td class="item" class="details" align ="center"><i class="far fa-power-off"></i>ºü¸¥ ½ÃÀÛ  </td>
-                  		<td align ="center">   »çÀü¿¡ ÁØºñµÈ ÀÌ¹ÌÁö·Î ´õ ºü¸£°Ô ÀÎ½ºÅÏ½º¸¦ ½ÃÀÛÇÏ¼¼¿ä. </td>
-                  	</tr>
-                  	<tr>
-                  		<td class="item" class="details" align ="center"><i class="far fa-power-off"></i>°ü¸® ±ÇÇÑ </td>
-                  		<td align ="center">   Administrator ¹× root ÃÖÁ¾ °ü¸® ±ÇÇÑÀ» ÀÌ¿ëÇÏ¼¼¿ä. </td>
-                  	</tr>
-                  	<tr>
-                  		<td class="item" class="details" align ="center"><i class="far fa-power-off"></i>¸ð¹ÙÀÏ È£È¯ </td>
-                  		<td align ="center">   µ¥½ºÅ©Åé »Ó¸¸ ¾Æ´Ï¶ó ¸ð¹ÙÀÏ¿¡¼­µµ ÀÎ½ºÅÏ½º¸¦ °ü¸®ÇÏ¼¼¿ä.</td>
-                  	</tr>
-                  	
-                  	</table>
-       
-       
-       
-    <!-- </section>
-    <section class="hero lg product-protection">
-        <div class="container">
-            <p class="headline">D-DoS ¹× À¯ÇØ Æ®·¡ÇÈÀ¸·ÎºÎÅÍ º¸È£ ¹ÞÀ¸¼¼¿ä.</p>
-            <div class="row justify-content-md-center">
-                <div class="col-md-9">
-                    <p class="details">
-                        ÃÖ±Ù »çÀÌ¹ö °ø°ÝÀÇ ¼öÁØÀº °íµµÈ­ µÇ¾îÁö°í ÀÖ½À´Ï´Ù. °ø°Ý ¹æ¹ý ¶ÇÇÑ ¸¹ÀÌ ¾Ë·ÁÁ®ÀÖ¾î ¿©·¯ºÐÀÇ ¼­ºñ½ºµµ ½±°Ô °ø°ÝÀÇ Ç¥ÀûÀÌ µÉ ¼ö ÀÖ½À´Ï´Ù. 
-                        SQUARENET ¼­ºñ½º¸¦ ÀÌ¿ëÇÏ´Â °Í¸¸À¸·Îµµ »çÀÌ¹ö °ø°ÝÀ¸·Î ÀÎÇÑ ¼­ºñ½º Áß´Ü°ú ¼ÕÇØ¸¦ ¹Ì¸® ¿¹¹æÇÒ ¼ö ÀÖ½À´Ï´Ù.
-                        24½Ã°£ º¸¾È °üÁ¦»ç°¡ ¼­ºñ½º ¿¬¼Ó¼ºÀ» À¯ÁöÇÏ±â À§ÇØ ÃÖ¼±À» ´ÙÇÏ°í ÀÖÀ» »Ó¸¸ ¾Æ´Ï¶ó »çÀÌ¹ö °ø°Ý °ü·Ã °í°´ »ó´ãµµ ÁøÇàÇÕ´Ï´Ù.
-                    </p>
-                </div>
-            </div>
-            <ul class="items">
-                <li>
-                    <p class="capacity">1Gbps</p>
-                    <p class="details">¹æ¾î º¸Àå</p>
-                </li>
-                <li>
-                    <p class="capacity">Signature</p>
-                    <p class="details">½Ç½Ã°£ ¾÷µ¥ÀÌÆ®</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="hero lg product-uptime">
-        <div class="container">
-            <p class="headline">¼­ºñ½º °¡µ¿·ü À¯Áö¸¦ À§ÇÑ ¿ì¸®ÀÇ ³ë·Â.</p>
-            <div class="row justify-content-md-center">
-                <div class="col-6 col-md-3 col-lg-2">
-                    <p class="item">100%</p>
-                    <p class="details">¼­ºñ½º °¡µ¿·ü</p>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <p class="item"><i class="fas fa-check"></i></p>
-                    <p class="details">Àü·Â ÀÌÁßÈ­</p>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <p class="item"><i class="fas fa-check"></i></p>
-                    <p class="details">º¸Á¶ Àü·Â</p>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <p class="item"><i class="fas fa-check"></i></p>
-                    <p class="details">³×Æ®¿öÅ© ÀÌÁßÈ­</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="hero lg product-performance">
-        <div class="container">
-            <p class="headline">¹Ï±âÁö ¾Ê´Â ¼º´ÉÀ» ¼±»çÇÕ´Ï´Ù.</p>
-            <div class="row justify-content-md-center">
-                <div class="col-12 col-sm-4 col-md-3 col-lg-2">
-                    <p class="top">ÃÖ´ë</p>
-                    <p class="item">3.6GHz</p>
-                    <p class="details">ÇÁ·Î¼¼¼­ µ¿ÀÛ ¼Óµµ</p>
-                </div>
-                <div class="col-12 col-sm-4 col-md-3 col-lg-2">
-                    <p class="top">ÃÖ´ë</p>
-                    <p class="item">3.2GB/s</p>
-                    <p class="details">½ºÅä¸®Áö ÀÐ±â ¼Óµµ</p>
-                </div>
-                <div class="col-12 col-sm-4 col-md-3 col-lg-2">
-                    <p class="top">Æò±Õ</p>
-                    <p class="item">40ÃÊ</p>
-                    <p class="details">ÀÎ½ºÅÏ½º ¼³Ä¡ ¼Óµµ</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="hero lg product-backup">
-        <div class="container">
-            <p class="icon"><i class="far fa-hdd"></i> <i class="far fa-chevron-double-right"></i> <i class="far fa-clone"></i></p>
-            <p class="headline">¼ÒÁßÇÑ µ¥ÀÌÅÍ¸¦ º¸È£ÇÏ¼¼¿ä.</p>
-            <div class="row justify-content-md-center">
-                <div class="col-md-9">
-                    <p class="details">
-                        ¾Õ¼­°¡´Â ¼­ºñ½º´Â ¸Å ½Ã°£ ±â·ÏµÇ´Â ¼ÒÁßÇÑ µ¥ÀÌÅÍ¸¦ º¸È£ÇÏ±â À§ÇØ ¿©·¯ µ¥ÀÌÅÍ ¹é¾÷ ´ëÃ¥À» ³íÀÇÇÏ°í ½ÃÇàÇÏ°í ÀÖ½À´Ï´Ù. 
-                        ¿ì¸®´Â ¼­ºñ½º¸¦ ÀÌ¿ëÇÏ´Â Áß µ¥ÀÌÅÍ°¡ ¼Õ½ÇµÇ´Â ÀÏÀÌ ¾ø¾î¾ß ÇÑ´Ù°í »ý°¢ÇÕ´Ï´Ù. ÀÌ·¯ÇÑ »ý°¢À¸·Î °í°´ ¿©·¯ºÐÀÇ µ¥ÀÌÅÍ¸¦ ¿ì¼±À¸·Î º¸È£ÇÕ´Ï´Ù. 
-                        SQUARENET Àü¹®°¡°¡ ¿À·£ ±â°£ °í½ÉÇØ¼­ Á¦°øÇÏ´Â ¹é¾÷À» ÀÌ¿ëÇÏ¼¼¿ä. ÀÌ µ¥ÀÌÅÍ ¹é¾÷Àº SQUARENETÀ» ÀÌ¿ëÇÑ´Ù¸é ´©±¸¿¡°Ô³ª ¹«·á·Î Àû¿ëµË´Ï´Ù. 
-                        ÀÌ Áö´ÉÀûÀÌ°í °í°´ Ä£È­ÀûÀÎ ¹é¾÷Àº ÇÏ·ç¿¡ ÇÑ ¹ø ÁøÇàµË´Ï´Ù. µ¥ÀÌÅÍ ¸Á½Ç°ú °°Àº ¹®Á¦°¡ ÀÖÀ» ¶§ ¾ÈÀüÇÑ µ¥ÀÌÅÍ¸¦ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="hero lg product-security">
-        <div class="container">
-            <p class="headline">¾ÈÀüÇÑ À§Ä¡¿¡¼­ ¿î¿µµË´Ï´Ù.</p>
-            <div class="row justify-content-md-center">
-                <div class="col-6 col-md-3 col-lg-2">
-                    <p class="item">Áøµµ<br>7.0</p>
-                    <p class="details">³»Áø ¼³°è</p>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <p class="item">¼öÀ§<br>7.0m</p>
-                    <p class="details">È«¼ö ¾ÈÀüÁö´ë</p>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <p class="item">Á¤¸Æ<br>ÀÎ½Ä</p>
-                    <p class="details">½Å¿ø È®ÀÎ ¹× º¸¾È</p>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2">
-                    <p class="item">¾ÈÀü<br>Áö´ë</p>
-                    <p class="details">µðÁöÅÐ´ÜÁö À§Ä¡</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="hero lg product-spla">
-        <div class="container">
-            <p class="icon"><i class="fab fa-windows"></i> Windows Server</p>
-            <p class="headline">Á¤Ç° ¼ÒÇÁÆ®¿þ¾î¿Í ¾÷µ¥ÀÌÆ®¸¦ ¸¸³ª¼¼¿ä.</p>
-            <div class="row justify-content-md-center">
-                <div class="col-md-9">
-                    <p class="details">
-                        ¿ì¸®´Â Microsoft¿Í SPLA<span class="compress">(Service Providor License Agreement)</span> °è¾àÀ» Ã¼°áÇß½À´Ï´Ù.
-                        ´ë·® °è¾àÀ¸·Î ÃÖÁ¾ °í°´ÀÎ ¿©·¯ºÐÀº ºÎ´ã¾øÀÌ Windows Server¿Í Æ÷ÇÔµÈ °­·ÂÇÑ ¼­¹ö ¼ÒÇÁÆ®¿þ¾î¸¦ ÀÌ¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù. 
-                        ¸ðµÎ Á¤Ç° ¶óÀÌ¼±½º·Î Á¦°øµÇ±â¿¡, º¸¾È ¾÷µ¥ÀÌÆ®¸¦ »ó½Ã Á¦°ø¹ÞÀ» ¼ö ÀÖ½À´Ï´Ù. 
-                    </p>
-                </div>
-            </div>
-            <a href="https://www.microsoft.com/ko-kr/Licensing/licensing-programs/spla-program.aspx" target="_blank" class="extlink">´õ ¾Ë¾Æº¸±â <i class="far fa-external-link-alt"></i></a>
-        </div>
-    </section>
-    <section class="hero lg product-why-cloud">
-        <div class="container">
-            <p class="headline">¿Ö Å¬¶ó¿ìµå¸¦ »ç¿ëÇÒ±î¿ä?</p>
-            <div class="row justify-content-md-center">
-                <div class="col-md-9">
-                    <p class="details">
-                        ÃÖ±Ù È¸»ç¸¶´Ù Àü»ê½ÇÀ» ±¸ºñÇÏ°í ¿î¿µÇÏ´Â °Í¿¡¼­ Å¬¶ó¿ìµå¸¦ ÀÌ¿ëÇÏ´Â °ÍÀ¸·Î Ãß¼¼°¡ º¯ÇÏ°í ÀÖ½À´Ï´Ù. 
-                        »ó½Ã ´ë±â ÀÎ·Â°ú °í°¡ÀåºñÀÇ ±ÝÀüÀû ºÎ´ã°ú Àå¾Ö¿¡ Áï°¢ÀûÀ¸·Î ´ëÀÀÇÏ±â ¾î·Æ±â ¶§¹®ÀÔ´Ï´Ù. ¿î¿µ Áß ¹ß»ýÇÏ´Â º¯¼ö ¶ÇÇÑ ¼­ºñ½ºÀÇ ¿¬¼Ó¼ºÀ» ÀúÇØÇÒ ¼ö ÀÖ½À´Ï´Ù. 
-                        ÀÌÁ¦ ¼­¹ö´Â SQUARENET¿¡ ¸Ã±â°í ±âÈ¹°ú °³¹ß¿¡¸¸ ÁýÁßÇÏ¼¼¿ä. Å¬¶ó¿ìµå¿Í ÇÔ²² ¿©·¯ºÐÀÇ ¼­ºñ½º´Â ¾Õ¼­³ª°¥ °ÍÀÔ´Ï´Ù.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="hero lg product-one">
-        <div class="container">
-            <p class="headline">¸ðµç °ÍÀ» <span class="brand">SQUARENET</span>¿¡¼­ ¸¸³ª¼¼¿ä.</p>
-            <div class="row justify-content-md-center">
-                <div class="col-md-8">
-                    <p class="details">
-                        ¼­¹ö ½ÃÀÛºÎÅÍ ¿î¿µ, ±×¸®°í À¯Áö º¸¼ö±îÁö. ÀÛ¾÷À» °¢°¢ ´Ù¸¥ ¾÷Ã¼¿¡¼­ ÁøÇàÇÏ°Ô µÇ¸é ÀÛ¾÷ ¿¬¼Ó¼ºÀÌ ÀúÇÏµÇ±â ¸¶·ÃÀÌÁÒ. 
-                        ¼­¹ö¿¡ °üÇÑ ¸ðµç °ÍÀ» ÇÑ °÷¿¡¼­ ÇØ°áÇÏ±â ¿øÇÏ´Â ¿©·¯ºÐ¿¡°Ô °¡Àå ÀûÇÕÇÕ´Ï´Ù. ¿ì¸®´Â ¼­ºñ½º¸¦ Ã¥ÀÓÀÖ°Ô °³¹ßÇØ, ¼­ºñ½º°£ ¿¬¼Ó¼ºÀ» º¸ÀåÇÕ´Ï´Ù. 
-                    </p>
-                </div>
-            </div>
-            <a href="https://portal.squarenet.kr/cloud/c/start" target="_blank" class="extlink">½ÃÀÛÇÏ±â <i class="far fa-external-link-alt"></i></a> <a href="/price" class="link">ÁÖ¿ä ¿ä±Ý ¾Ë¾Æº¸±â <i class="far fa-angle-right"></i></a>
-            <div class="row items">
-                <div class="col-md-4">
-                    <i class="fas fa-server"></i> 
-                    <span class="name">¼­¹ö</span>
-                </div>
-                <div class="col-md-4">
-                    <i class="fas fa-external-link-square-alt"></i> 
-                    <span class="name">µµ¸ÞÀÎ</span>
-                </div>
-                <div class="col-md-4">
-                    <i class="fas fa-wrench"></i> 
-                    <span class="name">±â¼ú Áö¿ø</span>
-                </div>
-            </div>
-        </div>
-    </section>
-</article>        <footer class="sq footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <ul class="items">
-                            <li class="header">Å¬¶ó¿ìµå ÄÄÇ»Æ®</li>
-                            <li><a href="https://portal.squarenet.kr/cloud/c/start">½ÃÀÛÇÏ±â</a></li>
-                            <li><a href="/product">»óÇ° ¾Ë¾Æº¸±â</a></li>
-                            <li><a href="/price">¿ä±Ý ¾Ë¾Æº¸±â</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <ul class="items">
-                            <li class="header">°í°´ Áö¿ø</li>
-                            <li><a href="/support">°í°´ Áö¿ø ½ÃÀÛÇÏ±â</a></li>
-                            <li><a href="/security">º¸¾È ¼Ò½Ä</a></li>
-                            <li><a href="/ping">Ping Å×½ºÆ®</a></li>
-                            <li><a href="/uptime">¼­ºñ½º °¡µ¿·ü</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <ul class="items">
-                            <li class="header">ºÎ°¡ ¼­ºñ½º</li>
-                            <li><a href="https://abh.kr" target="_blank">´ÜÃà URL »ý¼º</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <ul class="items">
-                            <li class="header">SQUARENET</li>
-                            <li><a href="/who">È¸»ç ¼Ò°³</a></li>
-                            <li><a href="mailto://donghoon@squarenet.kr">Á¦ÈÞ Á¦¾È</a></li>
-                            <li><a href="/terms">¼­ºñ½º ÀÌ¿ë ¾à°ü</a></li>
-                            <li><a href="/sla">¼­ºñ½º ¼öÁØ Çù¾à</a></li>
-                            <li><a href="/privacypolicy">°³ÀÎÁ¤º¸ Ãë±Þ¹æÄ§</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <hr>
-                <p class="copr">(C) 2016-2018 SQUARENET. <span lang="KO">¸ðµç ±Ç¸® º¸À¯.</span></p>
-                <p class="com"><span lang="KO">»ç¾÷ÀÚµî·Ï¹øÈ£</span>: 299-39-00162 | <span lang="KO">Åë½ÅÆÇ¸Å¾÷½Å°í¹øÈ£</span>: <span lang="KO">Á¦</span> 2017-<span lang="KO">°æ±â¿©ÁÖ</span>-0163<span lang="KO">È£</span></p>
-                <p class="com"><span lang="KO">µ¥ÀÌÅÍ¼¾ÅÍ ¼ÒÀçÁö</span>: <span lang="KO">¼­¿ïÆ¯º°½Ã ±ÝÃµ±¸ °¡»êµðÁöÅÐ</span>1<span lang="KO">·Î</span> 189 LG CNS</p>
-            </div>
-        </footer> -->
+
+		<!-- jQuery (ë¶€íŠ¸ìŠ¤íŠ¸ëž©ì˜ ìžë°”ìŠ¤í¬ë¦½íŠ¸ í”ŒëŸ¬ê·¸ì¸ì„ ìœ„í•´ í•„ìš”í•©ë‹ˆë‹¤) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- ëª¨ë“  ì»´íŒŒì¼ëœ í”ŒëŸ¬ê·¸ì¸ì„ í¬í•¨í•©ë‹ˆë‹¤ (ì•„ëž˜), ì›í•˜ì§€ ì•ŠëŠ”ë‹¤ë©´ í•„ìš”í•œ ê°ê°ì˜ íŒŒì¼ì„ í¬í•¨í•˜ì„¸ìš” -->
+    <script src="<%= request.getContextPath() %>/bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+	
     
 </body>
 </html>
