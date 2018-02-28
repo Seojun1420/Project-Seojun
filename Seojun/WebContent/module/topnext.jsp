@@ -1,10 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>NEXTCloud - È£½ºÆÃ, ±× ÀÌ»óÀÇ Å¬¶ó¿ìµå</title>
+<title>NEXTCloud - í˜¸ìŠ¤íŒ…, ê·¸ ì´ìƒì˜ í´ë¼ìš°ë“œ</title>
 </head>
 
 
@@ -27,56 +26,56 @@
 			<figure class="brand" alt="NEXT Cloud"></figure></a>
 		</div>
 			<div class="col-sm-12 col-md-6">
-	<a href="<%= request.getContextPath() %>/Cloud/cloud.jsp">»óÇ°</a>
-	<a href="<%= request.getContextPath() %>/price/price.jsp">¿ä±Ý</a>
-	<a href="<%= request.getContextPath() %>/support/support.jsp">°í°´Áö¿ø</a>
-	<a href="<%= request.getContextPath() %>/login/Login.jsp">½ÃÀÛÇÏ±â</a>
+	<a href="<%= request.getContextPath() %>/Cloud/cloud.jsp">ìƒí’ˆ</a>
+	<a href="<%= request.getContextPath() %>/price/price.jsp">ìš”ê¸ˆ</a>
+	<a href="<%= request.getContextPath() %>/support/support.jsp">ê³ ê°ì§€ì›</a>
+	<a href="<%= request.getContextPath() %>/login/Login.jsp">ì‹œìž‘í•˜ê¸°</a>
 	</div>
 
-		<!-- ·Î±×ÀÎ Àü È­¸é ½ÃÀÛ  -->
+		<!-- ë¡œê·¸ì¸ ì „ í™”ë©´ ì‹œìž‘  -->
 <%-- 	<form action="<%= request.getContextPath() %>/login/login_pro.jsp" method="post">
-		<td align ="center"> ¾ÆÀÌµð</td>
-		<td align ="center"> <input type="text" name="Id"placeholder="¾ÆÀÌµð"></td>
+		<td align ="center"> ì•„ì´ë””</td>
+		<td align ="center"> <input type="text" name="Id"placeholder="ì•„ì´ë””"></td>
 			<br>
 			<tr>
-		<td align ="center"> ÆÐ½º¿öµå</td>
-		<td align ="center"><input type="password" name="Password" placeholder="ºñ¹Ð¹øÈ£"></td>
-		<td><input type="submit" value="·Î±×ÀÎ"></td>
+		<td align ="center"> íŒ¨ìŠ¤ì›Œë“œ</td>
+		<td align ="center"><input type="password" name="Password" placeholder="ë¹„ë°€ë²ˆí˜¸"></td>
+		<td><input type="submit" value="ë¡œê·¸ì¸"></td>
 		<tr>
 	</form> --%>
-<!-- ·Î±×ÀÎ Àü È­¸é End -->	
+<!-- ë¡œê·¸ì¸ ì „ í™”ë©´ End -->	
 		
 	<%
 		}else{
-			if(S_LEVEL.equals("ºñÈ¸¿ø & ·Î±×ÀÎÇÏÁö ¾ÊÀº È¸¿ø")){
+			if(S_LEVEL.equals("ë¹„íšŒì› & ë¡œê·¸ì¸í•˜ì§€ ì•Šì€ íšŒì›")){
 	%>	
-	 	<a href="<%= request.getContextPath() %>/Insert/Insert_form.jsp">È¸¿ø °¡ÀÔ</a>
+	 	<a href="<%= request.getContextPath() %>/Insert/Insert_form.jsp">íšŒì› ê°€ìž…</a>
 	 	
                 <%
 		}else{
-			if(S_LEVEL.equals("È¸¿ø")){
+			if(S_LEVEL.equals("íšŒì›")){
                 %>
-        	 	<a href="<%= request.getContextPath() %>/">»óÇ°ÁÖ¹®</a>
-        	 	<a href="<%= request.getContextPath() %>/">ÁÖ¹®Á¶È¸</a>
+        	 	<a href="<%= request.getContextPath() %>/">ìƒí’ˆì£¼ë¬¸</a>
+        	 	<a href="<%= request.getContextPath() %>/">ì£¼ë¬¸ì¡°íšŒ</a>
         	 	  <%
-		}else if(S_LEVEL.equals("°ü¸®ÀÚ")){
+		}else if(S_LEVEL.equals("ê´€ë¦¬ìž")){
                 %>
-                <a href="<%= request.getContextPath() %>/List/user_list.jsp">È¸¿øÁ¶È¸</a>
-                <a href="<%= request.getContextPath() %>/">°øÁö»çÇ×</a>
-                <a href="<%= request.getContextPath() %>/">¼­ºñ½º</a>
-                <a href="<%= request.getContextPath() %>/">»óÇ°µî·Ï</a>
-                <a href="<%= request.getContextPath() %>/">»óÇ°Á¶È¸</a>
+                <a href="<%= request.getContextPath() %>/List/user_list.jsp">íšŒì›ì¡°íšŒ</a>
+                <a href="<%= request.getContextPath() %>/">ê³µì§€ì‚¬í•­</a>
+                <a href="<%= request.getContextPath() %>/">ì„œë¹„ìŠ¤</a>
+                <a href="<%= request.getContextPath() %>/">ìƒí’ˆë“±ë¡</a>
+                <a href="<%= request.getContextPath() %>/">ìƒí’ˆì¡°íšŒ</a>
                 	  <%
-		}else if(S_LEVEL.equals("¿î¿µÀÚ")){
+		}else if(S_LEVEL.equals("ìš´ì˜ìž")){
                 %>
-                <a href="<%= request.getContextPath() %>/List/user_list.jsp">È¸¿øÁ¶È¸</a>
-                <a href="<%= request.getContextPath() %>/">°øÁö»çÇ×</a>
+                <a href="<%= request.getContextPath() %>/List/user_list.jsp">íšŒì›ì¡°íšŒ</a>
+                <a href="<%= request.getContextPath() %>/">ê³µì§€ì‚¬í•­</a>
 <%
 		}
 %>
 	<br><br>
-		<%= S_NAME %> ´Ô <%= S_LEVEL %> ±ÇÇÑÀ¸·Î ·Î±×ÀÎ
-		<a href="<%= request.getContextPath() %>/login/logout.jsp">·Î±×¾Æ¿ô</a>
+		<%= S_NAME %> ë‹˜ <%= S_LEVEL %> ê¶Œí•œìœ¼ë¡œ ë¡œê·¸ì¸
+		<a href="<%= request.getContextPath() %>/login/logout.jsp">ë¡œê·¸ì•„ì›ƒ</a>
 	 	<%
 		}
 	 	%>

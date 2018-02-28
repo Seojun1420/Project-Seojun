@@ -1,56 +1,127 @@
- <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<!DOCTYPE html >
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/main.css" />
-
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!--
+ 		       _   _ _____   _________
+		   	  / | / / __\ \/ /__   __/
+		     /   / / __/ \/ /   / /   
+			/ /|  / /___ /\ \  / /      
+		   /_/ |_/_____// /\ \/_/     
+        (C) 2018 NEXT ëª¨ë“  ê¶Œë¦¬ ë³´ìœ .
+ 
+-->
 
 <%@ include file="/module/header.jsp" %>
 <%@ include file="/module/topnext.jsp" %>
 
-	<div style="text-align:center">
-		<h2>Next Cloud È¸¿ø°¡ÀÔ È­¸é</h2>
-		<table width="80%" border="1" cellspacing="8" cellpadding="5" bordercolor="#8C8C8C"
-			style="margin:auto;">
-			<form action="<%=request.getContextPath()%>/Search/user_search_list.jsp" method="post">
-              	<tr>
-              <td>¾ÆÀÌµğ</td>
-              <td><input type="text"name="Id" placeholder="¾ÆÀÌµğ"></td>
-             	<tr>
-              <td>ºñ¹Ğ¹øÈ£</td>
-              <td><input type="password"name="Password" placeholder="ºñ¹Ğ¹øÈ£"></td>
-              	<tr>
-              <td> ÀÌ¸§ </td>	
-              <td><input type="text"name="Name" placeholder="ÀÌ¸§"></td>
-              	<tr>
-              <td> ÀÌ¸ŞÀÏ </td>
-              <td><input type="email"name="Email" placeholder="¸ŞÀÏ"></td>
-               	<tr>
-              <td> ´Ğ³×ÀÓ </td>
-              <td><input type="text" name="Nickname" placeholder="´Ğ³×ÀÓ"></td>
-             <tr>
-              <tr>
-				<td>±ÇÇÑ</td>
-				<td><select name="Level">
-				<option selected>È¸¿ø
-				<option>°ü¸®ÀÚ
-				<option>¿î¿µÀÚ
-				</select></td>
-					<tr>
-				<td> °¡ÀÔ ¹öÆ° </td>
-             <td><button type="submit" class="sqn-btn full blue">È¸¿ø°¡ÀÔ <i class="far fa-angle-right"></i></button></td>
-            <tr>
-            
-            </form>
+<jsp:include page="/Insert/Insert_form1.jsp"></jsp:include>
+<style>
+	body{padding: 0; margin: 0; background-color: #efefef !important;}
+	h2{text-align: center;}
+	.panel{margin-bottom:0 !important;}
+	.footer{text-align: center; padding: 15px;}
+	.input-group{margin-bottom: 5px !important;}
+</style>
+
+
+
+	<h2>íšŒì›ê°€ì…</h2>
+
+	<div class="row"> 
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6">
+			<div class="panel panel-default">
+				<div class="panel-body form-horizontal">
+				
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="memberId">ì•„ì´ë””</label>
+						<div class="col-sm-10">
+							<input type="text" name="Id" id="Id" class="form-control" placeholder="ì•„ì´ë””"/>
+						</div>				                                                      
+					</div>
+					
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="Password">ë¹„ë°€ë²ˆí˜¸</label>
+						<div class="col-sm-10">
+							<input type="password" name="Password" id="password" class="form-control" placeholder="ë¹„ë°€ë²ˆí˜¸"/>
+						</div>				                                                      
+					</div>
+					
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="Passwordc">ë¹„ë°€ë²ˆí˜¸ì¬í™•ì¸</label>
+						<div class="col-sm-10">
+							<input type="password" name="Passwordc" id="passwordc" class="form-control" placeholder="ë¹„ë°€ë²ˆí˜¸ì¬í™•ì¸"/>
+						</div>				                                                      
+					</div>
+				
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="Name">ì´ë¦„</label>
+						<div class="col-sm-10">
+							<input type="text" name="Name" id="memberName" class="form-control" placeholder="ì„±ëª…"/>
+						</div>				
+					</div>
+					
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="Email">ì´ë©”ì¼</label>
+						<div class="col-sm-10">
+							<!-- <input type="email" name="Email" id="Email" class="form-control" placeholder="ì´ë©”ì¼"/> -->
+							<input type="email" name="Email" class="form-control" placeholder="ë©”ì¼">
+						</div>				
+					</div>
+					
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="Nickname">ë‹‰ë„¤ì„</label>
+						<div class="col-sm-10">
+							<input type="text" name="Nickname" id="Nickname" class="form-control" placeholder="ë‹‰ë„¤ì„"/>
+						</div>				
+					</div>
+					
+					<div class="form-group" >
+						<label class="col-sm-2 control-label" for="Level">ê¶Œí•œ</label>
+						<div class="col-sm-10">
+								<select class="form-control">
+								  <option>ìš´ì˜ì</option>
+								  <option>ê´€ë¦¬ì</option>
+								  <option>íšŒì›</option>
+								</select>
+						</div>
+					</div>
+					
+					<!-- <div class="form-group">
+						<label class="col-sm-2 control-label" for="membertg">íŠ¹ê¸°</label>
+						<div class="col-sm-10">
+							ìƒë‹¨ styleì— ì…ë ¥
+							.input-group{margin-bottom: 5px !important;}
+						
+							<div class="input-group"> 
+								<div class="input-group-addon">íŠ¹ê¸°1</div>
+      							<input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+							</div>
+							<div class="input-group"> 
+								<div class="input-group-addon">íŠ¹ê¸°2</div>
+      							<input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+							</div>
+							<div class="input-group"> 
+								<div class="input-group-addon">íŠ¹ê¸°3</div>
+      							<input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+							</div>				                                                      
+							</div> -->
+							
+											
+					</div>
+							<button type="button" class="btn btn-lg btn-primary btn-block"> 
+								íšŒì›ê°€ì…
+							</button>			
+				
+				</div>
+				
+				</div>
+			</div>
 			
-		</table>
-</head>
-<body>
-
-
-</body>
-</html>
+			
+		</div>
+		<div class="col-sm-3"></div>
+	
+	
+	<div class="footer">
+		<small> Next Cloud </small>	
+	</div>
+<jsp:include page="/Insert/Insert_form2.jsp"></jsp:include>

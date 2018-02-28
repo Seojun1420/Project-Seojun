@@ -3,43 +3,35 @@
 <!DOCTYPE html >
 <html>
 <head>
-		<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <meta name="format-detection" content="telephone=no">
-		<meta property="og:title" content="NEXTCloud">
-		<meta property="og:url" content="">
-        <meta property="og:description" content="상품">
-<title>NEXTCloud - 호스팅, 그 이상의 클라우드</title>
-
-
-<link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/main.css" />
+	<title>NEXTCloud - 호스팅, 그 이상의 클라우드</title>
+	<link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/main.css" />
+	  <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+      <meta name="format-detection" content="telephone=no">
+	  <meta property="og:title" content="NEXTCloud">
+	  <meta property="og:url" content="">
+      <meta property="og:description" content="상품">
 </head>
 <body>
 	<%@ include file="/module/header.jsp" %>
 	<%@ include file="/module/topnext.jsp" %>
 
-	<header class="Next header">
-		<div class="container"> 
-			<div class="row"> 
+		<!-- <header class="Next header">
+			<div class="container"> 
+			  <div class="row"> 
 				<a href="/">
 					<figure class="brand" alt="NEXT"></figure>
 				</a>
 				<div class="col-sm-12 col-md-6">
-				
-				
-                        <a href="/"><figure class="brand" alt="NEXT Cloud"></figure></a>
-                    </div>
-                    	</div>
-				<p class="headline">상품</p>
-	
+				  <a href="/"><figure class="brand" alt="NEXT Cloud"></figure></a>
                 </div>
-             
-        </header><article class="next article">
+        </header><article class="next article"> -->
     <section class="hero lg product-type">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                   <table border="5" style="width: 40%" align ="center" class="details" >
+              <br><br>
                 <tr>
                 	<td class="far fa-cloud" class="headline" align ="center" > 클라우드</td>
                 	<td class="details" align ="center"> 남녀노소 누구나 손쉽고 신속하게 이용할 수 있습니다. 5분 이내에 결제부터 인스턴스 생성까지 모두 마치세요. 인스턴스는 언제나 웹에서 관리할 수 있습니다.</td>

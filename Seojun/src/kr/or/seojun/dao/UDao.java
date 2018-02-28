@@ -17,10 +17,10 @@ public class UDao {
 	User join = null;
 	ArrayList<User> alm = null;
 	
-	// ·Î±×ÀÎ °úÁ¤
+
 	public String uLoginCheck(String Id, String Password) throws ClassNotFoundException, SQLException {
-		System.out.println("============·Î±×ÀÎÇÒ½Ã ·Î±×ÀÎ¾È³»¸Ş½ÃÁö ============");
-		System.out.println("·Î±×ÀÎ Ã¼Å©  uLoginCheck Udao.java");
+		System.out.println("============ë¡œê·¸ì¸í• ì‹œ ë¡œê·¸ì¸ì•ˆë‚´ë©”ì‹œì§€ ============");
+		System.out.println("ë¡œê·¸ì¸ ì²´í¬  uLoginCheck Udao.java");
 		String re = null;
 		DriverDB db = new DriverDB();
 		conn = db.driverDbcon();
@@ -28,24 +28,23 @@ public class UDao {
 		pstmt.setString(1, Id);
 		rs = pstmt.executeQuery();
 		if(rs.next()){
-			System.out.println("rs.naxt() ÁøÀÔÀü");
+			System.out.println("rs.naxt() ì§„ì…ì „");
 			if(rs.getString("Password").equals(Password)){
-				re = "·Î±×ÀÎ ¼º°ø";
-				System.out.println("·Î±×ÀÎ¿¡ ¼º°øÇÏ¼Ì½À´Ï´Ù.");
+				re = "ë¡œê·¸ì¸ ì„±ê³µ";
+				System.out.println("ë¡œê·¸ì¸ì— ì„±ê³µí•˜ì…¨ìŠµë‹ˆë‹¤.");
 			}else {
-				re = "·Î±×ÀÎ ½ÇÆĞ, ÆĞ½º¿öµå Æ²¸²";
-				System.out.println("ÆĞ½º¿öµå Æ²·È½À´Ï´Ù.");
+				re = "ë¡œê·¸ì¸ ì‹¤íŒ¨, íŒ¨ìŠ¤ì›Œë“œ í‹€ë¦¼";
+				System.out.println("íŒ¨ìŠ¤ì›Œë“œ í‹€ë ¸ìŠµë‹ˆë‹¤.");
 			}
 		}else{
-			re = "·Î±×ÀÎ ½ÇÆĞ, ¾ÆÀÌµğ Æ²¸²";
-			System.out.println("¾ÆÀÌµğ Æ²·È½À´Ï´Ù.");
+			re = "ë¡œê·¸ì¸ ì‹¤íŒ¨, ì•„ì´ë”” í‹€ë¦¼";
+			System.out.println("ì•„ì´ë”” í‹€ë ¸ìŠµë‹ˆë‹¤.");
 		}
 		return re;
 	}
 
-	//·Î±×ÀÎ ÇÏ°í ±ÇÇÑ ¾ò±â
 	public User uGetForSession(String Id) throws ClassNotFoundException, SQLException {
-		System.out.println("·Î±×ÀÎ¼º°ø½Ã ¾ÆÀÌµğ,ÀÌ¸§,±ÇÇÑ Á¶È¸ uGetForSession"
+		System.out.println("ë¡œê·¸ì¸ì„±ê³µì‹œ ì•„ì´ë””,ì´ë¦„,ê¶Œí•œ ì¡°íšŒ uGetForSession"
 				+ "on Udao.java");
 		System.out.println("Id : "+Id);
 		DriverDB db = new DriverDB();
@@ -64,71 +63,70 @@ public class UDao {
 		return join;
 	}
 
-	// ÀüÃ¼È¸¿ø Á¶È¸
-	public ArrayList<User> uAllSelect() throws ClassNotFoundException, SQLException{
-		System.out.println("======= Next Cloud ÀüÃ¼ È¸¿ø Á¶È¸ ======");
-		DriverDB db = new DriverDB();
-		conn = db.driverDbcon();
-		pstmt = conn.prepareStatement("select * form tb_join");
-		rs = pstmt.executeQuery();
-		while(rs.next()){
-			System.out.println("Äõ¸® ½ÇÇà");
+	// ì „ì²´íšŒì› ì¡°íšŒ
+		public ArrayList<User> uAllSelect() throws ClassNotFoundException, SQLException{
+			System.out.println("======= Next Cloud ì „ì²´ íšŒì› ì¡°íšŒ ======");
+			DriverDB db = new DriverDB();
+			conn = db.driverDbcon();
+			pstmt = conn.prepareStatement("select * form tb_join");
+			rs = pstmt.executeQuery();
+			while(rs.next()){
+				System.out.println("ì¿¼ë¦¬ ì‹¤í–‰");
+				pstmt.setString(1, join.getId());
+				pstmt.setString(2, join.getPassword());
+				pstmt.setString(3, join.getName());
+				pstmt.setString(4, join.getEmail());
+				pstmt.setString(5, join.getNickname());
+				pstmt.setString(6, join.getLevel());
+				alm.add(join);
+				System.out.println(alm+"<-- alm");
+			}
+			
+			
+			return alm;
+		}
+	//NEXT cloud íšŒì›ê°€ì… ë§¤ê°œë³€ìˆ˜ 1ê°œ
+		public void uInsert(User join) throws ClassNotFoundException, SQLException{
+			System.out.println("======= Next Cloud íšŒì›ê°€ì…ì´ ì •ìƒì ìœ¼ë¡œ ì²˜ë¦¬ë˜ì—ˆìŠµë‹ˆë‹¤. ======");
+			DriverDB db = new DriverDB();
+			conn = db.driverDbcon();
+			pstmt = conn.prepareStatement(
+					"INSERT INTO tb_join VALUES (?,?,?,?,?,?)");
 			pstmt.setString(1, join.getId());
 			pstmt.setString(2, join.getPassword());
 			pstmt.setString(3, join.getName());
 			pstmt.setString(4, join.getEmail());
 			pstmt.setString(5, join.getNickname());
 			pstmt.setString(6, join.getLevel());
-			alm.add(join);
-			System.out.println(alm+"<-- alm");
+			
+			pstmt.executeUpdate();
+			pstmt.close();
+			conn.close();
 		}
 		
-		
-		return alm;
-	}
-	
-	//NEXT cloud È¸¿ø°¡ÀÔ ¸Å°³º¯¼ö 1°³
-	public void uInsert(User join) throws ClassNotFoundException, SQLException{
-		System.out.println("======= Next Cloud È¸¿ø°¡ÀÔÀÌ Á¤»óÀûÀ¸·Î Ã³¸®µÇ¾ú½À´Ï´Ù. ======");
-		DriverDB db = new DriverDB();
-		conn = db.driverDbcon();
-		pstmt = conn.prepareStatement(
-				"INSERT INTO tb_join VALUES (?,?,?,?,?,?)");
-		pstmt.setString(1, join.getId());
-		pstmt.setString(2, join.getPassword());
-		pstmt.setString(3, join.getName());
-		pstmt.setString(4, join.getEmail());
-		pstmt.setString(5, join.getNickname());
-		pstmt.setString(6, join.getLevel());
-		
-		pstmt.executeUpdate();
-		pstmt.close();
-		conn.close();
-	}
-	
-	//NEXT cloud È¸¿ø°¡ÀÔ ¸Å°³º¯¼ö 2°³
-	public void uInsert(User join, Connection conn) throws ClassNotFoundException, SQLException{
-		System.out.println("======= Next Cloud È¸¿ø°¡ÀÔÀÌ Á¤»óÀûÀ¸·Î Ã³¸®µÇ¾ú½À´Ï´Ù. ======");
-		pstmt = conn.prepareStatement("INSERT INTO tb_join VALUES (?,?,?,?,?,?)");
-		System.out.println(this.pstmt + "<-- pstmt 1 ");
-		System.out.println(this.pstmt.getClass() + "<-- pstmt.getClass() 1");
-		
-		pstmt.setString(1, join.getId());
-		pstmt.setString(2, join.getPassword());
-		pstmt.setString(3, join.getName());
-		pstmt.setString(4, join.getEmail());
-		pstmt.setString(5, join.getNickname());
-		pstmt.setString(6, join.getLevel());
-		
-		pstmt.executeUpdate();
-		pstmt.close();
-		conn.close();
+	//NEXT cloud íšŒì›ê°€ì… ë§¤ê°œë³€ìˆ˜ 2ê°œ
+		public void uInsert(User join, Connection conn) throws ClassNotFoundException, SQLException{
+			System.out.println("======= Next Cloud íšŒì›ê°€ì…ì´ ì •ìƒì ìœ¼ë¡œ ì²˜ë¦¬ë˜ì—ˆìŠµë‹ˆë‹¤. ======");
+			pstmt = conn.prepareStatement("INSERT INTO tb_join VALUES (?,?,?,?,?,?)");
+			System.out.println(this.pstmt + "<-- pstmt 1 ");
+			System.out.println(this.pstmt.getClass() + "<-- pstmt.getClass() 1");
+			
+			pstmt.setString(1, join.getId());
+			pstmt.setString(2, join.getPassword());
+			pstmt.setString(3, join.getName());
+			pstmt.setString(4, join.getEmail());
+			pstmt.setString(5, join.getNickname());
+			pstmt.setString(6, join.getLevel());
+			
+			pstmt.executeUpdate();
+			pstmt.close();
+			conn.close();
 		
 	}
 	
-	//È¸¿ø °Ë»ö 
+	//È¸ï¿½ï¿½ ï¿½Ë»ï¿½ 
 	public ArrayList<User> uSearch(String Next, String next) throws ClassNotFoundException, SQLException{
-		System.out.println("06 È¸¿ø °Ë»ö uSearch Udao.java");
+		System.out.println("06 íšŒì› ê²€ìƒ‰ uSearch Udao.java");
 		alm = new ArrayList<User>();
 		DriverDB db = new DriverDB();
 		conn = db.driverDbcon();
@@ -142,7 +140,7 @@ public class UDao {
 		}
 		rs = pstmt.executeQuery();
 		while(rs.next()) {
-			System.out.println("Äõ¸® ½ÇÇà °á°ú ÀÖ³ª? uSelectforUpdate Udao.java");
+			System.out.println("ì¿¼ë¦¬ ì‹¤í–‰ ê²°ê³¼ ìˆë‚˜? uSelectforUpdate Udao.java");
 			join = new User();
 			join.setId(rs.getString("Id"));
 			join.setPassword(rs.getString("Password"));
@@ -156,5 +154,6 @@ public class UDao {
 		
 		return alm;
 	}
+	
 	
 }
