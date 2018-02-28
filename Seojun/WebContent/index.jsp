@@ -16,6 +16,8 @@
 <body>
 	<%@ include file="/module/header.jsp" %>
 	<%@ include file="/module/topnext.jsp" %>
+	<%@ include file="/Cloud/cloudmain.jsp" %>
+	
 	 
 	 	<div id= "rightcolumn"></div>
 	 	
