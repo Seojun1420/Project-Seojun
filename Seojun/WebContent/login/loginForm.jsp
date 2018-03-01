@@ -13,15 +13,17 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-    body{padding: 0; margin: 0; background-color: #3DB7CC !important;}
+   	body{padding: 0; margin: 0; background-color: #B2EBF4 !important;}
     h2{text-align: center; font-size: 30px;}
     </style>
 </head>
 <body>
+	
+
 	<h2> NextCloud 로그인 화면</h2>
 		<br>
-		<table width="35%" border="7" cellpadding="5" bordercolor="#000000" style="margin:auto;">
-			<form action="/" class="form-horizontal" method="post">
+		<table width="40%" border="5" cellpadding="5" bordercolor="#000000" style="margin:auto;">
+			<form action="/login/login_pro.jsp" class="form-horizontal" method="post">
 			 	 <tr>
 				     <td align ="center">
 				    	<label for="inputId3" class="control-label" align ="center"> 아이디 </label>
