@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>NEXTCloud - 호스팅, 그 이상의 클라우드</title>
 	<link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/bootstrap-3.3.2-dist/css/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/main.css" />
+	
 </head>
 
 
@@ -25,7 +25,7 @@
 	<%
 		if(S_LEVEL == null){
 	%>
-	<div class="row">
+	<%-- <div class="row">
 		<div class="col-sm-12 col-md-6">
 			<figure class="brand" alt="NEXT Cloud"></figure></a>
 		</div>
@@ -34,7 +34,7 @@
 	<a href="<%= request.getContextPath() %>/price/price.jsp">요금</a>
 	<a href="<%= request.getContextPath() %>/support/support.jsp">고객지원</a>
 	<a href="<%= request.getContextPath() %>/login/Login.jsp">시작하기</a>
-	</div>
+	</div> --%>
 
 		<!-- 로그인 전 화면 시작  -->
 <%-- 	<form action="<%= request.getContextPath() %>/login/login_pro.jsp" method="post">
